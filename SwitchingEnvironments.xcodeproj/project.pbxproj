@@ -12,6 +12,9 @@
 		AE8BD5172125EFF000BFFD7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8BD5152125EFF000BFFD7D /* Main.storyboard */; };
 		AE8BD5192125EFF100BFFD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE8BD5182125EFF100BFFD7D /* Assets.xcassets */; };
 		AE8BD51C2125EFF100BFFD7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8BD51A2125EFF100BFFD7D /* LaunchScreen.storyboard */; };
+		AE8BD5242125F08600BFFD7D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AE8BD5232125F08600BFFD7D /* Settings.bundle */; };
+		AE8BD5262125F75800BFFD7D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8BD5252125F75800BFFD7D /* Configuration.swift */; };
+		AE8BD5282125F77D00BFFD7D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8BD5272125F77D00BFFD7D /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		AE8BD5182125EFF100BFFD7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE8BD51B2125EFF100BFFD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE8BD51D2125EFF100BFFD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE8BD5232125F08600BFFD7D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		AE8BD5252125F75800BFFD7D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		AE8BD5272125F77D00BFFD7D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 		AE8BD5052125EFF000BFFD7D = {
 			isa = PBXGroup;
 			children = (
+				AE8BD5232125F08600BFFD7D /* Settings.bundle */,
 				AE8BD5102125EFF000BFFD7D /* SwitchingEnvironments */,
 				AE8BD50F2125EFF000BFFD7D /* Products */,
 			);
@@ -60,6 +67,8 @@
 				AE8BD5182125EFF100BFFD7D /* Assets.xcassets */,
 				AE8BD51A2125EFF100BFFD7D /* LaunchScreen.storyboard */,
 				AE8BD51D2125EFF100BFFD7D /* Info.plist */,
+				AE8BD5252125F75800BFFD7D /* Configuration.swift */,
+				AE8BD5272125F77D00BFFD7D /* Environment.swift */,
 			);
 			path = SwitchingEnvironments;
 			sourceTree = "<group>";
@@ -122,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8BD5242125F08600BFFD7D /* Settings.bundle in Resources */,
 				AE8BD51C2125EFF100BFFD7D /* LaunchScreen.storyboard in Resources */,
 				AE8BD5192125EFF100BFFD7D /* Assets.xcassets in Resources */,
 				AE8BD5172125EFF000BFFD7D /* Main.storyboard in Resources */,
@@ -135,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8BD5262125F75800BFFD7D /* Configuration.swift in Sources */,
+				AE8BD5282125F77D00BFFD7D /* Environment.swift in Sources */,
 				AE8BD5142125EFF000BFFD7D /* ViewController.swift in Sources */,
 				AE8BD5122125EFF000BFFD7D /* AppDelegate.swift in Sources */,
 			);

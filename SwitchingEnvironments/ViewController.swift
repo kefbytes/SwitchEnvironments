@@ -9,17 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var environmentLabel: UILabel!
+    var config = Configuration()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let defaults = UserDefaults.standard
+        if let env = defaults.object(forKey: "environment") as? String {
+            environmentLabel.text = env
+        }
+        NotificationCenter.default.addObserver(self,  selector: #selector(environmentChanged), name: UserDefaults.didChangeNotification, object: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        config = Configuration()
+        environmentLabel.text = config.environment.urlLogin
     }
-
-
+    
+    @objc func environmentChanged() {
+        config = Configuration()
+        environmentLabel.text = config.environment.urlLogin
+    }
+    
 }
 

@@ -1,0 +1,34 @@
+"Switching_Environments"
+
+1.) Add Settings Bundle
+	- Add new file > select Settings Bundle
+2.) Select Root.plist in Settings.Bundle
+	Under Preference Items you will see some baked in things, I will delete them
+3.) Add a Multi Value Items
+	set Title to Environment
+	set Identifier to environment
+	set a default value if you want
+4.) Values to the Multi Value item 
+5.) Add Titles to the Multi Value item 
+6.) Add a lable to our view
+7.) Hook the label up and display the env selected in viewDidLoad
+	  	let defaults = UserDefaults.standard
+        if let env = defaults.object(forKey: "environment") as? String {
+            environmentLabel.text = env
+        }
+8.) At this point you will need to restart the app to see the change
+9.) Add Configuration and Environment files
+10.) Comment out viewDidLoad and add viewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        config = Configuration()
+        environmentLabel.text = config.environment.urlLogin
+    }
+11.) Add a second view and embed all in nav controller so that we can use viewWillAppear
+12.) Add an observer to viewDidLoad
+	NotificationCenter.default.addObserver(self,  selector: #selector(environmentChanged), name: UserDefaults.didChangeNotification, object: nil)
+13.) And add the new function
+    @objc func environmentChanged() {
+        config = Configuration()
+        environmentLabel.text = config.environment.urlLogin
+    }
